@@ -1,20 +1,23 @@
 use sdl2::pixels::Color;
 
-pub(crate) static colors: [Color; 5] = [
+pub(crate) static BACKGROUND_COLOR: Color = Color::RGBA(0x44, 0x44, 0x44, 0xFF);
+pub(crate) static BOARD_COLOR: Color = Color::RGB(0x33, 0x33, 0x33);
+
+pub(crate) static COLORS: [Color; 5] = [
     Color::GREEN,
     Color::RED,
-    Color::BLUE,
     Color::YELLOW,
     Color::CYAN,
+    Color::MAGENTA,
 ];
 
 pub(crate) fn rand_color() -> Color {
     let idx: usize = rand::random();
-    return colors[idx % colors.len()];
+    return COLORS[idx % COLORS.len()];
 }
 
 // [[[[pixel;column];row];direction];shape]
-pub(crate) static items: [[[[bool; 4]; 4]; 4]; 5] = [
+pub(crate) static ITEMS: [[[[bool; 4]; 4]; 4]; 5] = [
     // — | — |
     [
         [
