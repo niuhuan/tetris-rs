@@ -203,13 +203,7 @@ impl Game {
                             }
                         }
                         Event::KeyDown {
-                            keycode: Some(Keycode::Down),
-                            ..
-                        } => {
-                            down = true;
-                        }
-                        Event::KeyDown {
-                            keycode: Some(Keycode::Space),
+                            keycode: Some(Keycode::Up),
                             ..
                         } => {
                             let dst = (self.item.direction_index + 1) % 4;
@@ -218,7 +212,7 @@ impl Game {
                             }
                         }
                         Event::KeyDown {
-                            keycode: Some(Keycode::Up),
+                            keycode: Some(Keycode::Down),
                             ..
                         } => {
                             while self.can_item_move(self.item.direction_index, 0, 1) {

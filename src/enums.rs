@@ -17,7 +17,7 @@ pub(crate) fn rand_color() -> Color {
 }
 
 // [[[[pixel;column];row];direction];shape]
-pub(crate) static ITEMS: [[[[bool; 4]; 4]; 4]; 5] = [
+pub(crate) static ITEMS: [[[[bool; 4]; 4]; 4]; 7] = [
     // — | — |
     [
         [
@@ -155,6 +155,60 @@ pub(crate) static ITEMS: [[[[bool; 4]; 4]; 4]; 5] = [
             [false, true, false, false],
             [true, true, false, false],
             [true, false, false, false],
+        ],
+    ],
+    // J J J J
+    [
+        [
+            [false, false, false, false],
+            [false, true, false, false],
+            [false, true, false, false],
+            [true, true, false, false],
+        ],
+        [
+            [false, false, false, false],
+            [true, false, false, false],
+            [true, true, true, false],
+            [false, false, false, false],
+        ],
+        [
+            [false, false, false, false],
+            [false, true, true, false],
+            [false, true, false, false],
+            [false, true, false, false],
+        ],
+        [
+            [false, false, false, false],
+            [false, false, false, false],
+            [true, true, true, false],
+            [false, false, true, false],
+        ],
+    ],
+    // L L L L
+    [
+        [
+            [false, false, false, false],
+            [false, true, false, false],
+            [false, true, false, false],
+            [false, true, true, false],
+        ],
+        [
+            [false, false, false, false],
+            [false, false, false, false],
+            [true, true, true, false],
+            [true, false, false, false],
+        ],
+        [
+            [false, false, false, false],
+            [true, true, false, false],
+            [false, true, false, false],
+            [false, true, false, false],
+        ],
+        [
+            [false, false, false, false],
+            [false, false, true, false],
+            [true, true, true, false],
+            [false, false, false, false],
         ],
     ],
 ];
